@@ -33,12 +33,22 @@ class Faculty(Person): #derived class
         self.salary = z
         self.courses_taught = []
 
-    def display(self):
+#polymorphism
+    def display(self, ss="", tt=""):
         Person.display(self)
         print(self.department)
         print(self.designation)
         print(self.salary)
 
+        if ss!="":
+            print(ss)
+        if tt!="":
+            print(tt)
+
 
 s1 = Student("MJ", "111", "18", "Music", "CS", 3.9, "Cyb")
-s1.display()
+s1.display() #1st form of invoking the function
+s1.display("USA") #2nd form
+s1.display("USA", "AR") #3rd form
+
+
